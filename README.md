@@ -10,6 +10,8 @@ python3 scrape.py
 
 Estimated monthly payments will print out to the console on the right-most column of the screen.
 
+"Monthly payment" is the total amount you will spend on this asset. This includes mortgage payment, HOA fee, and estimated property management fee.
+
 ## Variables
 
 The monthly payment estimation assumes several variables. You can change these depending on your specific situation.
