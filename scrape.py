@@ -2,17 +2,22 @@ from redfin_scraper import RedfinScraper
 
 available_down_payment = 60000
 list_price_discount = 10 # in percentage points
+interest_rate = 7
+biweekly = True
 
 def calculate_monthly_payment(list_price, hoa):
 
     list_price = list_price*(1 - list_price_discount / 100) #
     principal = float(float(list_price) - available_down_payment)
-    interest_rate = 7
+    
     loan_term = 30
 
     r = interest_rate / 100 / 12
     loan_term_months = loan_term * 12
-    n = loan_term * 26 #assuming biweekly payments
+    if biweekly:
+        n = loan_term * 26 #assuming biweekly payments
+    else:
+        n = loan_term * 12
 
     # Calculate monthly mortgage payment
     monthly_payment = (principal * r * ((1+r)**n)) / (((1+r)**n) - 1)
