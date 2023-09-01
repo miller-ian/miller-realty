@@ -1,15 +1,15 @@
-Aug-30-23 11:05:32: INFO - *****Beginning Log*****
-Aug-30-23 11:05:32: INFO - Function setup started.
-Aug-30-23 11:05:32: INFO - Function setup took 0.0721904999999996 seconds.
-Aug-30-23 11:05:32: INFO - Function scrape started.
-Aug-30-23 11:05:32: WARNING - KEY ERROR: Zip Codes for ('Arlington', 'Virginia') could not be found.
-Aug-30-23 11:05:32: WARNING - KEY ERROR: Zip Codes for ('Reston', 'Virginia') could not be found.
-Aug-30-23 11:05:35: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20388 could not be found.
-Aug-30-23 11:05:35: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20500 could not be found.
-Aug-30-23 11:05:35: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20376 could not be found.
-Aug-30-23 11:05:35: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20045 could not be found.
-Aug-30-23 11:05:35: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20374 could not be found.
-Aug-30-23 11:05:35: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20260 could not be found.
-Aug-30-23 11:05:36: INFO - Function scrape took 3.623547416 seconds.
-Aug-30-23 11:05:36: INFO - Function get_data started.
-Aug-30-23 11:05:36: INFO - Function get_data took 1.3750000000811724e-06 seconds.
+Sep-01-23 09:27:57: INFO - *****Beginning Log*****
+Sep-01-23 09:27:57: INFO - Function setup started.
+Sep-01-23 09:27:57: INFO - Function setup took 0.05463291700000006 seconds.
+Sep-01-23 09:27:57: INFO - Function scrape started.
+Sep-01-23 09:27:57: WARNING - KEY ERROR: Zip Codes for ('Arlington', 'Virginia') could not be found.
+Sep-01-23 09:27:57: WARNING - KEY ERROR: Zip Codes for ('Reston', 'Virginia') could not be found.
+Sep-01-23 09:28:07: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20045 could not be found.
+Sep-01-23 09:28:07: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20374 could not be found.
+Sep-01-23 09:28:07: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20260 could not be found.
+Sep-01-23 09:28:07: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20376 could not be found.
+Sep-01-23 09:28:07: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20500 could not be found.
+Sep-01-23 09:28:07: WARNING - HTTPS ERROR: API link for https://www.redfin.com/zipcode/20388 could not be found.
+Sep-01-23 09:28:13: INFO - Function scrape took 15.887806999999999 seconds.
+Sep-01-23 09:28:13: INFO - Function get_data started.
+Sep-01-23 09:28:13: INFO - Function get_data took 1.6670000029250787e-06 seconds.
