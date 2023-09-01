@@ -1,23 +1,26 @@
 from redfin_scraper import RedfinScraper
 
-available_down_payment = 50000
+available_down_payment = 60000
+list_price_discount = 10 # in percentage points
 
 def calculate_monthly_payment(list_price, hoa):
-    print("hello")
+
+    list_price = list_price*(1 - list_price_discount / 100) #
     principal = float(float(list_price) - available_down_payment)
     interest_rate = 7
     loan_term = 30
 
-    monthly_interest_rate = interest_rate / 100 / 12
+    r = interest_rate / 100 / 12
     loan_term_months = loan_term * 12
+    n = loan_term * 26 #assuming biweekly payments
 
     # Calculate monthly mortgage payment
-    loan_payment = (principal * (monthly_interest_rate * (1 + monthly_interest_rate) ** loan_term_months) \
-                      / ((1 + monthly_interest_rate) ** loan_term_months - 1))
-    monthly_payment = (loan_payment + float(hoa)) * 1.1 #1.1x is property management fee estimate
+    monthly_payment = (principal * r * ((1+r)**n)) / (((1+r)**n) - 1)
+
+    total_monthly_payment = (monthly_payment + float(hoa)) * 1.1 #1.1x is property management fee estimate
 
     total_payment = (monthly_payment * loan_term_months)
-    return monthly_payment
+    return total_monthly_payment
 
 def scrape():
 
@@ -28,12 +31,12 @@ def scrape():
     units_of_interest = [
         "2337 Champlain St NW #1",
         "1800 Key Blvd #500",
-        "1301 N Courthouse Rd #1114"
+        "1301 N Courthouse Rd #1114",
     ]
 
     city_states = ["Arlington, Virginia",
                 "Washington, DC",
-                "Reston, Virginia"]
+                ]
     zip_codes = ["20009", "22302", "20170", "22201"]
     sold = False
     sale_period = None
